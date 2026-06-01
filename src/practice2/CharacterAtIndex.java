@@ -10,16 +10,18 @@ public class CharacterAtIndex {
 		
 		String str = "Java";
 		
+		System.out.println("Enter index of Character");
+		int index = sc.nextInt();
+		
 		try{
 			
-			System.out.println("Enter index of Character");
-			int index = sc.nextInt();
-			
-			int result = str.charAt(index);
+			char ch = str.charAt(index);
+			System.out.println("Character at index " + index + " is: " + ch);
 		}
 		catch(StringIndexOutOfBoundsException e){
 			
 			System.out.println("Invalid Index");
 		}
+		sc.close();
 	}
 }
